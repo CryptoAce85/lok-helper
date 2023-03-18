@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "opensans";
+    src: url('/fonts/opensans-regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url('/fonts/opensans-bold.ttf') format("truetype");
+    font-weight: bold;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify_between {
+    justify-content: space-between;
+}
+
+.justify_around {
+    justify-content: space-around;
+}
+
+body {
+    margin: 0;
+    font-family: 'opensans', sans-serif;
+    background-color: #2C2033;
+}
+
+.app,
+.overlay_app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.app {
+    background-color: #654472;
+}
+
+.overlay_app {
+    height: 100%;
+}
+
+#heading,
+.overlay_header {
+    text-align: center;
+    font-weight: bold;
+    justify-content: space-between;
+    background-color: #BE5A7D;
+    position: fixed;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+#heading > #settings {
+    padding: 1em;
+    cursor: pointer;
+}
+
+.overlay_header,
+#menu > div {
+    padding: 1em;
+}
+
+.overlay_header {
+    z-index: 1;
+}
+
+#menu > div.selected {
+    background-color: #654472;
+    color: #CE356F;
+}
+
+#menu > div:not(.selected) {
+    cursor: pointer;
+}
+
+/* region SETTINGS */
+
+.setting_item_container span {
+    margin: 0.25em;
+}
+
+.setting_row + .setting_row {
+    margin-top: 0.25em;
+}
+
+/* endregion SETTINGS */
+#tabs,
+.overlay_content {
+    margin-top: 3em;
+}
+
+.overlay_content {
+    background: #654472;
+}
+
+#building_tab {
+    display: none;
+}
+
+#overlays {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.close_overlay {
+    cursor: pointer;
+}
+
+#settings_overlay {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease;
+    transform: translateX(-100%);
+    background: #654472;
+}
+
+#settings_overlay.overlay_show {
+    transform: translateX(0%);
+}
+
+#building_tab,
+#research_tab,
+.overlay_content {
+    padding: 1.25em;
+}
+
+#building_select,
+#building_level_select,
+#research_tree_select,
+#research_research_select,
+#research_level_select {
+    display: block;
+    width: 100%;
+}
+
+.container > span {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.25em;
+    color: #CE356F;
+}
+
+input,
+select {
+    padding: 0.5em;
+}
+
+.container + .container {
+    border-top: 1px solid black;
+    margin-top: 1em;
+    padding-top: 0.5em;
+}
+
+#building_level_container,
+#building_result_container,
+#research_research_container,
+#research_level_container,
+#research_result_container {
+    display: none;
+}
+
+.setting_heading,
+.result_heading {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+}
+
+.setting_item_container,
+.result_item_container {
+    background-color: #BE5A7D;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+.setting_item_container + .setting_item_container,
+.result_item_container + .result_item_container {
+    margin-top: 1em;
+}
+
+.resource_container {
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+    margin: 0.25em;
+}
+
+#building_result_resources span,
+#research_result_resources span{
+    font-size: 1.5em;
+}
+
+.requirement_container {
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+.requirement_container img {
+    max-width: 100%;
+    max-height: 10em;
+}
+
+.requirement_container div {
+    font-size: 1.25em;
+    padding: 0.25em;
+}
+
+.time_block_container {
+    font-size: 1.25em;
+    margin: 0.25em;
+}
+
+#footer {
+    text-align: center;
+    padding: 1em;
+    color: #CE356F;
+}
+
+#footer > span {
+    background-image: url("/img/kainlogo_bear.svg");
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+}
