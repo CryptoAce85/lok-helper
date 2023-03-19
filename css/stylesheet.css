@@ -35,7 +35,7 @@
 body {
     margin: 0;
     font-family: 'opensans', sans-serif;
-    background-color: #2C2033;
+    background-color: #e5f4fb;
 }
 
 .app,
@@ -52,7 +52,7 @@ body {
 }
 
 .app {
-    background-color: #654472;
+    background-color: #fab005;
 }
 
 .overlay_app {
@@ -64,7 +64,7 @@ body {
     text-align: center;
     font-weight: bold;
     justify-content: space-between;
-    background-color: #BE5A7D;
+    background-color: #228be6;
     position: fixed;
     max-width: 500px;
     width: 100%;
@@ -87,8 +87,8 @@ body {
 }
 
 #menu > div.selected {
-    background-color: #654472;
-    color: #CE356F;
+    background-color: #fab005;
+    color: #212529;
 }
 
 #menu > div:not(.selected) {
@@ -112,7 +112,7 @@ body {
 }
 
 .overlay_content {
-    background: #654472;
+    background: #fab005;
 }
 
 #building_tab {
@@ -142,7 +142,7 @@ body {
     left: 0;
     transition: transform .5s ease;
     transform: translateX(-100%);
-    background: #654472;
+    background: #fab005;
 }
 
 #settings_overlay.overlay_show {
@@ -170,7 +170,7 @@ body {
     text-align: center;
     padding: 0.5em;
     font-size: 1.25em;
-    color: #CE356F;
+    color: #000000;
 }
 
 input,
@@ -202,7 +202,7 @@ select {
 
 .setting_item_container,
 .result_item_container {
-    background-color: #BE5A7D;
+    background-color: #228be6;
     border-radius: 0.5em;
     padding: 1em;
 }
@@ -248,7 +248,7 @@ select {
 #footer {
     text-align: center;
     padding: 1em;
-    color: #CE356F;
+    color: #000000;
 }
 
 #footer > span {
